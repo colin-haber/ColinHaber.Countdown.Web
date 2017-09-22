@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<title>Countdown</title>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="./index.css" type="text/css" media="screen" />
+		<script src="./index.js" type="application/javascript"></script>
+		<template id="clock-template">
+			<article class="clock-root">
+				<header class="clock-header">
+					<h1 class="clock-name"></h1>
+					<button class="clock-delete">&times;</button>
+				</header>
+				<main class="clock-main">
+					<p>
+						<time class="clock-countdown clock-display">
+							<span class="clock-section">
+								<span class="clock-day clock-value"></span>
+								<span class="clock-label">Days</span>
+							</span>
+							<span class="clock-section">
+								<span class="clock-hour clock-value"></span>
+								<span class="clock-label">Hours</span>
+							</span>
+							<span class="clock-section">
+								<span class="clock-minute clock-value"></span>
+								<span class="clock-label">Minutes</span>
+							</span>
+							<span class="clock-section">
+								<span class="clock-second clock-value"></span>
+								<span class="clock-label">Seconds</span>
+							</span>
+						</time>
+						<time class="clock-end"></time>
+					</p>
+				</main>
+			</article>
+		</template>
+	</head>
+	<body class="app-root">
+		<header class="app-header">
+			<hgroup>
+				<h1>Countdown</h1>
+			</hgroup>
+		</header>
+		<main class="app-main clock-container">
+			<article class="editor-root">
+				<header class="editor-header">
+					<input type="text" class="editor-name" placeholder="Name" />
+					<button class="editor-add">+</button>
+				</header>
+				<main class="editor-main">
+					<p><input type="datetime-local" class="editor-end" /></p>
+				</main>
+			</article>
+		</main>
+	</body>
+</html>

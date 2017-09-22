@@ -1,0 +1,178 @@
+button,
+fieldset,
+input {
+	padding: unset;
+}
+button,
+fieldset,
+input {
+	border: unset;
+}
+body,
+fieldset,
+h1,
+p {
+	margin: unset;
+}
+button,
+h1,
+input {
+	font: unset;
+}
+button,
+input {
+	color: unset;
+}
+button,
+input {
+	background: unset;
+}
+:focus {
+	outline: unset;
+}
+
+$color-primary: #3498DB;
+$color-dark: #324755;
+$color-light: #F9FAFC;
+$color-accent: #E74C3C;
+
+:root {
+	font: 1em/1.5 "Arial", sans-serif;
+}
+
+.app-root {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	overflow: hidden;
+	color: $color-dark;
+	background-color: white;
+	.app-header {
+		flex: 0 0 auto;
+		padding: 0.75rem 1rem;
+		color: white;
+		background-color: $color-dark;
+		h1 {
+			font-size: 2rem;
+			line-height: 1;
+		}
+	}
+	.app-main {
+		flex: 1 1 auto;
+		overflow-y: auto;
+	}
+}
+.clock-root {
+	text-align: center;
+	background-color: $color-light;
+	.clock-header {
+		display: flex;
+		padding: 0.75rem 1rem;
+		justify-content: space-between;
+		overflow: hidden;
+		text-align: start;
+		white-space: nowrap;
+		color: white;
+		background-color: $color-primary;
+		.clock-name {
+			flex: 1 1 auto;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.clock-delete {
+			display: block;
+			flex-shrink: 0;
+			width: 1.5rem;
+			height: 1.5rem;
+			border-radius: 0.75rem;
+			&:focus,
+			&:hover {
+				background-color: $color-accent;
+			}
+		}
+	}
+	.clock-main {
+		padding: 0.75rem 1rem;
+	}
+	.clock-display {
+		display: flex;
+		.clock-section {
+			flex: 1 1 25%;
+			margin-right: 1rem;
+			&:last-child {
+				margin-right: unset;
+			}
+		}
+	}
+	.clock-section {
+		display: flex;
+		padding: {
+			top: 0.75rem;
+			bottom: 0.75rem;
+		}
+		flex-direction: column;
+		align-items: center;
+		background-color: white;
+	}
+	.clock-value {
+		font-size: 2rem;
+		line-height: 1;
+		font-feature-settings: "tnum" on;
+	}
+	.clock-label {
+		font-size: 10px;
+		line-height: 1rem;
+		text-transform: uppercase;
+	}
+	.clock-end {
+		display: block;
+		margin-top: 0.75rem;
+		font-size: 10px;
+		line-height: 1rem;
+	}
+}
+.editor-root {
+	text-align: center;
+	background-color: $color-light;
+	.editor-header {
+		display: flex;
+		padding: 0.75rem 1rem;
+		justify-content: space-between;
+		overflow: hidden;
+		text-align: start;
+		white-space: nowrap;
+		color: white;
+		background-color: $color-primary;
+		.editor-name {
+			flex: 1 1 auto;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			&::placeholder {
+				color: currentColor;
+				opacity: 0.4;
+			}
+		}
+		.editor-add {
+			display: block;
+			flex-shrink: 0;
+			width: 1.5rem;
+			height: 1.5rem;
+			border-radius: 0.75rem;
+			&:focus,
+			&:hover {
+				background-color: $color-accent;
+			}
+		}
+	}
+	.editor-main {
+		padding: 0.75rem 1rem;
+		input {
+			box-sizing: border-box;
+			width: 100%;
+		}
+		.editor-end {
+			padding: 0.75rem 1rem;
+			background-color: white;
+		}
+	}
+}
